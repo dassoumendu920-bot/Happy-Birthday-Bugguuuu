@@ -1,12 +1,5 @@
-// Cursor following effect
-const cursor = document.querySelector('.cursor');
-document.addEventListener('mousemove', (e) => {
-    cursor.style.left = e.clientX + 'px';
-    cursor.style.top = e.clientY + 'px';
-});
-
 // Typing effect for greeting
-const greetingText = "Hey You Know What! You're the most adorable human i ever met! 💖";
+const greetingText = "Thank U yaar thoda time dene ke liye, ik U r travelling & tired too.. I won't take much time... So can U 👇🏻";
 const greetingElement = document.querySelector('.greeting');
 let charIndex = 0;
 
@@ -19,7 +12,7 @@ function typeGreeting() {
 }
 
 // Create floating elements
-const floatingElements = ['💖', '✨', '🌸', '💫', '💕'];
+const floatingElements = ['💖', '✨', '🎂', '🎊', '🪩'];
 function createFloating() {
     const element = document.createElement('div');
     element.className = 'floating';
