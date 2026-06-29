@@ -1,23 +1,23 @@
  // Reasons database
  const reasons = [
     { 
-        text: "You’re such a kind and wonderful person, and I feel lucky to share such a good bond with you. 💖", 
-        emoji: "🌟",
+        text: "Baar baar din yeh aaye, baar baar dil yeh gaaye! happy birthday to U🎀 (Buguuuuu/laila/Janviiii/Jiya/darling) bahut naam hai tumhare! 💗", 
+        emoji: "🥳",
         gif: "gif1.gif"
     },
     { 
-        text: "May your day be filled with love, laughter, and endless joy. 🌸 ", 
-        emoji: "💗",
+        text: "Seriously tumare jaisa dimaag khane wala dost milna mushkil hai, par tumhari positive energy & cool vibe ka sach me koi match nahi hai ! 🌻", 
+        emoji: "💝",
         gif: "gif2.gif"
     },
     { 
-        text: "Wishing you success, happiness, and everything your heart desires. ✨ ", 
+        text: "Tum dill ki acchi ho, but kabhi khabar dimag kharab ho jata hai, buss thoda sa patience lana. Choti choti baat se apna mood kharab maat kiya karo, Bocz vho mara kaam hai. Yk na. 😋  Aur apna health ka thoda dhyan rakho, time se khana khaya karo & jo bhi vho gawar dr's tumhen Meds or medication dete hai.. unhen thik se follow karo ! ✨ ", 
         emoji: "💕",
         gif: "gif1.gif"
     },
     { 
-        text: "Stay the amazing girl you are—always spreading positivity around. Have the happiest year ahead! 🥳 ", 
-        emoji: "🌟",
+        text: "Jaisa ki tumko pata hi hai tum kitne bade pagal ho, mante nahin vho alag baat hai, but I would suggest hamesha vaisi hi rehna. May this year bring you endless success, happiness, aur khoob saari khushiyan! 🥂", 
+        emoji: "🧿",
         gif: "gif2.gif"
     }
 ];
@@ -76,7 +76,7 @@ function displayNewReason() {
                 duration: 0.5,
                 ease: "elastic.out",
                 onComplete: () => {
-                    shuffleButton.textContent = "Enter Our Storylane 💫";
+                    shuffleButton.textContent = "​Picture abhi baaki hai, tap karo! 🍿";
                     shuffleButton.classList.add('story-mode');
                     shuffleButton.addEventListener('click', () => {
                         gsap.to('body', {
@@ -117,7 +117,7 @@ shuffleButton.addEventListener('click', () => {
 
 // Floating elements function (same as before)
 function createFloatingElement() {
-    const elements = ['🌸', '✨', '💖', '🦋', '⭐'];
+    const elements = ['🌸', '✨', '💖', '🦋', '🎀'];
     const element = document.createElement('div');
     element.className = 'floating';
     element.textContent = elements[Math.floor(Math.random() * elements.length)];
