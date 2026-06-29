@@ -84,6 +84,9 @@ window.addEventListener('load', () => {
 
         // Smooth page transition on click
         button.addEventListener('click', () => {
+            const music = document.getElementById('birthday-music');
+            if (music) { music.play(); }
+
             gsap.to('body', {
                 opacity: 0,
                 duration: 1,
