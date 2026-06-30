@@ -27,8 +27,31 @@
         </div>
     </div>
 
-    <script src="cause.js">
-       
+    <script src="cause.js"></script>
+    <audio id="birthday-music" src="./music.mp3" loop></audio>
+
+    <script>
+    window.addEventListener('DOMContentLoaded', () => {
+        const music = document.getElementById('birthday-music');
+        const isPlaying = localStorage.getItem('musicPlaying');
+        const savedTime = localStorage.getItem('musicCurrentTime');
+
+        if (music && isPlaying === 'true') {
+            if (savedTime) {
+                music.currentTime = parseFloat(savedTime);
+            }
+            // Resumes smoothly because the user already interacted on Page 1
+            music.play().catch(err => console.log("Playback bridge failed:", err));
+        }
+
+        // Keep updating the saved time right before leaving this page
+        window.addEventListener('beforeunload', () => {
+            if (music) {
+                localStorage.setItem('musicCurrentTime', music.currentTime);
+            }
+        });
+    });
     </script>
+    
 </body>
 </html>
