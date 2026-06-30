@@ -77,15 +77,24 @@ window.addEventListener('load', () => {
 
         // Smooth page transition on click
         button.addEventListener('click', () => {
-            const music = document.getElementById('birthday-music');
-            if (music) { music.play(); }
+    const music = document.getElementById('birthday-music');
+    if (music) { 
+        music.play().then(() => {
+            localStorage.setItem('musicPlaying', 'true');
+            localStorage.setItem('musicCurrentTime', music.currentTime);
+        }).catch(err => console.log("Audio block bypass failed:", err));
+    }
 
-            gsap.to('body', {
-                opacity: 0,
-                duration: 1,
-                onComplete: () => {
-                    window.location.href = 'cause.html'; // Replace with the actual URL of the next page
-                }
-            });
-        });
+    gsap.to('body', {
+        opacity: 0,
+        duration: 1,
+        onComplete: () => {
+            if (music) {
+                localStorage.setItem('musicCurrentTime', music.currentTime);
+            }
+            window.location.href = 'cause.html'; 
+        }
+    });
+});
+
     });
