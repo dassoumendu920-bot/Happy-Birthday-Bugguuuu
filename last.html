@@ -404,6 +404,30 @@
         <p>You deserve all the joy in the world—keep shining and spreading your beautiful energy.✨</p>
         <a href="#" class="goodbye-btn">Until We Meet Again 💝</a>
     </section>
+
+    <audio id="birthday-music" src="./music.mp3" loop></audio>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        const music = document.getElementById('birthday-music');
+        const isPlaying = localStorage.getItem('musicPlaying');
+        const savedTime = localStorage.getItem('musicCurrentTime');
+
+        if (music && isPlaying === 'true') {
+            if (savedTime) {
+                music.currentTime = parseFloat(savedTime);
+            }
+            music.play().catch(err => console.log("Playback bridge failed:", err));
+        }
+
+        window.addEventListener('beforeunload', () => {
+            if (music) {
+                localStorage.setItem('musicCurrentTime', music.currentTime);
+            }
+        });
+    });
+</script>
+    
 </body>
 
 </html>
