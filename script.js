@@ -1,5 +1,5 @@
 // Typing effect for greeting
-const greetingText = "Thank U yaar thoda time dene ke liye, ik U r travelling & tired too.. I won't take much time... So can U 👇🏻";
+const greetingText = "Thank U yaar thoda time dene ke liye, ik U have travelled & tired too.. I won't take much time... So can U 👇🏻";
 const greetingElement = document.querySelector('.greeting');
 let charIndex = 0;
 
