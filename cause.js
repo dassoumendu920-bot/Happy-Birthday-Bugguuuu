@@ -1,7 +1,7 @@
  // Reasons database
  const reasons = [
     { 
-        text: "Baar baar din yeh aaye, baar baar dil yeh gaaye! happy birthday to U🎀 (Buguuuuu/laila/Janviiii/Jiya/darling) bahut naam hai tumhare! 💗", 
+        text: "Baar baar din yeh aaye, baar baar dil yeh gaaye! happy birthday to U🎀 ( Buguuuuu/ laila/ Janviiii/ Jiya/ darling ) bahut naam hai tumhare! 💗", 
         emoji: "🥳",
         gif: "gif1.gif"
     },
